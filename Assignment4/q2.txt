@@ -1,0 +1,13 @@
+Question 2
+
+a) movie(year(X),Z,_),X>2002.
+b) movie(_,title(X),_),member(of,X).
+c) movie(_,title(X),_),movie(_,title(Y),_),X\=Y,cont(X,Y).
+	cont([H|T],L):-member(H,L).
+	cont([H|T],L):-cont(T,L).
+	see line 23 of q2.pl
+d) actor(X,Y,gender(Z)),Z=female.
+e) movie(_,T,cast(C)),actor(X,Y,gender(female)),member(actor(X,Y),C).
+f) movie(_,T,cast(C)),member(actor(orlando,bloom),C).
+g) movie(_,T,cast(X)),movie(_,Y,cast(Z)),T\=Y,member(actor(A,B),X),member(actor(A,B),Z).
+h) 
